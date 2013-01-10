@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<GPIFIIModel version="3">
+  <InterfaceDefination>
+    <InterfaceSetting>
+      <I2SEnabled>False</I2SEnabled>
+      <I2CEnabled>False</I2CEnabled>
+      <SPIEnabled>False</SPIEnabled>
+      <I2SEnabled>False</I2SEnabled>
+      <ADMuxedEnabled>True</ADMuxedEnabled>
+      <CommunicationType>Synchronous</CommunicationType>
+      <ClockSource>External</ClockSource>
+      <Endianness>LittleEndian</Endianness>
+      <DataBusWidth>Bit16</DataBusWidth>
+      <AddressBuswidth>8</AddressBuswidth>
+      <InterfaceType>Slave</InterfaceType>
+    </InterfaceSetting>
+  </InterfaceDefination>
+  <Signals>
+    <Signal ElementId="INPUT0" SignalType="Input" SpecialFunction="OE">
+      <DisplayName>OE</DisplayName>
+      <GPIOPinNumber>GPIO_19</GPIOPinNumber>
+      <Polarity>ActiveLow</Polarity>
+    </Signal>
+    <Signal ElementId="INPUT1" SignalType="Input" SpecialFunction="None">
+      <DisplayName>CE</DisplayName>
+      <GPIOPinNumber>GPIO_17</GPIOPinNumber>
+      <Polarity>ActiveLow</Polarity>
+    </Signal>
+    <Signal ElementId="INPUT2" SignalType="Input" SpecialFunction="None">
+      <DisplayName>WE</DisplayName>
+      <GPIOPinNumber>GPIO_18</GPIOPinNumber>
+      <Polarity>ActiveLow</Polarity>
+    </Signal>
+    <Signal ElementId="INPUT3" SignalType="Input" SpecialFunction="None">
+      <DisplayName>ADV</DisplayName>
+      <GPIOPinNumber>GPIO_27</GPIOPinNumber>
+      <Polarity>ActiveLow</Polarity>
+    </Signal>
+    <Signal ElementId="OUTPUT0" SignalType="Output" SpecialFunction="None">
+      <DisplayName>RDY</DisplayName>
+      <GPIOPinNumber>GPIO_25</GPIOPinNumber>
+      <IntialValue>Low</IntialValue>
+      <Polarity>ActiveHigh</Polarity>
+      <Delay>Alpha</Delay>
+      <AssetionType>Assert</AssetionType>
+    </Signal>
+  </Signals>
+  <StateMachine>
+    <AddressCounter />
+    <DataCounter />
+    <ControlCounter />
+    <AddressComparator />
+    <DataComparator />
+    <ControlComparator />
+    <DRQ />
+    <AddrData />
+    <State ElementId="STARTSTATE1" StateType="StartState">
+      <DisplayName>RESET</DisplayName>
+      <RepeatUntillNextTransition>True</RepeatUntillNextTransition>
+      <RepeatCount>0</RepeatCount>
+    </State>
+    <State ElementId="STATE1" StateType="NormalState">
+      <DisplayName>IDLE</DisplayName>
+      <RepeatUntillNextTransition>True</RepeatUntillNextTransition>
+      <RepeatCount>0</RepeatCount>
+      <Action ElementId="LD_DATA_COUNT0" ActionType="LD_DATA_COUNT">
+        <CounterType>Up</CounterType>
+        <CounterLoadValue>0</CounterLoadValue>
+        <CounterLimit>255</CounterLimit>
+        <CounterReloadEnable>Disable</CounterReloadEnable>
+        <CounterIncrement>1</CounterIncrement>
+        <CounterInterrupt>Mask</CounterInterrupt>
+      </Action>
+    </State>
+    <State ElementId="STATE2" StateType="NormalState">
+      <DisplayName>ADDR</DisplayName>
+      <RepeatUntillNextTransition>True</RepeatUntillNextTransition>
+      <RepeatCount>0</RepeatCount>
+      <Action ElementId="IN_ADDR0" ActionType="IN_ADDR">
+        <SampleAddressType>ThreadSelection</SampleAddressType>
+        <A7Override>DMAAccessAndRegisterAccess</A7Override>
+      </Action>
+    </State>
+    <State ElementId="STATE3" StateType="NormalState">
+      <DisplayName>READ</DisplayName>
+      <RepeatUntillNextTransition>True</RepeatUntillNextTransition>
+      <RepeatCount>0</RepeatCount>
+      <Action ElementId="DR_DATA0" ActionType="DR_DATA">
+        <IsDataCounterConnected>False</IsDataCounterConnected>
+        <DataSourceSink>Socket</DataSourceSink>
+        <ThreadNumber>Thread0</ThreadNumber>
+        <SyncBurstMode>Enable</SyncBurstMode>
+        <DriveNewData>DriveNewData</DriveNewData>
+      </Action>
+      <Action ElementId="DR_GPIO0" ActionType="DR_GPIO">
+        <ControlPinName>RDY</ControlPinName>
+      </Action>
+      <Action ElementId="COUNT_DATA0" ActionType="COUNT_DATA" />
+    </State>
+    <State ElementId="STATE4" StateType="NormalState">
+      <DisplayName>WRITE_START</DisplayName>
+      <RepeatUntillNextTransition>True</RepeatUntillNextTransition>
+      <RepeatCount>0</RepeatCount>
+      <Action ElementId="DR_GPIO0" ActionType="DR_GPIO">
+        <ControlPinName>RDY</ControlPinName>
+      </Action>
+    </State>
+    <State ElementId="STATE5" StateType="NormalState">
+      <DisplayName>READ_WAIT</DisplayName>
+      <RepeatUntillNextTransition>True</RepeatUntillNextTransition>
+      <RepeatCount>0</RepeatCount>
+      <Action ElementId="LD_DATA_COUNT0" ActionType="LD_DATA_COUNT">
+        <CounterType>Up</CounterType>
+        <CounterLoadValue>0</CounterLoadValue>
+        <CounterLimit>255</CounterLimit>
+        <CounterReloadEnable>Disable</CounterReloadEnable>
+        <CounterIncrement>1</CounterIncrement>
+        <CounterInterrupt>Mask</CounterInterrupt>
+      </Action>
+    </State>
+    <State ElementId="STATE6" StateType="NormalState">
+      <DisplayName>WRITE_READY</DisplayName>
+      <RepeatUntillNextTransition>True</RepeatUntillNextTransition>
+      <RepeatCount>0</RepeatCount>
+      <Action ElementId="DR_GPIO0" ActionType="DR_GPIO">
+        <ControlPinName>RDY</ControlPinName>
+      </Action>
+    </State>
+    <State ElementId="STATE7" StateType="NormalState">
+      <DisplayName>WRITE</DisplayName>
+      <RepeatUntillNextTransition>True</RepeatUntillNextTransition>
+      <RepeatCount>0</RepeatCount>
+      <Action ElementId="IN_DATA0" ActionType="IN_DATA">
+        <DataSourceSink>Socket</DataSourceSink>
+        <ThreadNumber>Thread0</ThreadNumber>
+        <SampleData>True</SampleData>
+        <WriteDataIntoDataSink>True</WriteDataIntoDataSink>
+      </Action>
+      <Action ElementId="COUNT_DATA0" ActionType="COUNT_DATA" />
+      <Action ElementId="DR_GPIO0" ActionType="DR_GPIO">
+        <ControlPinName>RDY</ControlPinName>
+      </Action>
+    </State>
+    <State ElementId="STATE8" StateType="NormalState">
+      <DisplayName>WRITE_WAIT</DisplayName>
+      <RepeatUntillNextTransition>True</RepeatUntillNextTransition>
+      <RepeatCount>0</RepeatCount>
+      <Action ElementId="LD_DATA_COUNT0" ActionType="LD_DATA_COUNT">
+        <CounterType>Up</CounterType>
+        <CounterLoadValue>0</CounterLoadValue>
+        <CounterLimit>255</CounterLimit>
+        <CounterReloadEnable>Disable</CounterReloadEnable>
+        <CounterIncrement>1</CounterIncrement>
+        <CounterInterrupt>Mask</CounterInterrupt>
+      </Action>
+    </State>
+    <Transition ElementId="TRANSITION1" SourceState="STARTSTATE1" DestinationState="STATE1" Equation="LOGIC_ONE" />
+    <Transition ElementId="TRANSITION2" SourceState="STATE1" DestinationState="STATE2" Equation="!CE&amp;!ADV" />
+    <Transition ElementId="TRANSITION3" SourceState="STATE2" DestinationState="STATE3" Equation="!CE&amp;!OE&amp;ADV" />
+    <Transition ElementId="TRANSITION4" SourceState="STATE2" DestinationState="STATE4" Equation="!CE&amp;!WE&amp;ADV" />
+    <Transition ElementId="TRANSITION5" SourceState="STATE3" DestinationState="STATE5" Equation="!CE&amp;!OE&amp;DATA_CNT_HIT" />
+    <Transition ElementId="TRANSITION6" SourceState="STATE5" DestinationState="STATE1" Equation="CE|OE" />
+    <Transition ElementId="TRANSITION7" SourceState="STATE5" DestinationState="STATE3" Equation="!CE&amp;!OE&amp;!DATA_CNT_HIT" />
+    <Transition ElementId="TRANSITION8" SourceState="STATE3" DestinationState="STATE1" Equation="CE|OE" />
+    <Transition ElementId="TRANSITION9" SourceState="STATE4" DestinationState="STATE6" Equation="!CE&amp;!WE" />
+    <Transition ElementId="TRANSITION10" SourceState="STATE6" DestinationState="STATE7" Equation="!CE&amp;!WE" />
+    <Transition ElementId="TRANSITION11" SourceState="STATE7" DestinationState="STATE8" Equation="!CE&amp;!WE&amp;DATA_CNT_HIT" />
+    <Transition ElementId="TRANSITION16" SourceState="STATE8" DestinationState="STATE4" Equation="!CE&amp;!WE&amp;!DATA_CNT_HIT" />
+    <Transition ElementId="TRANSITION12" SourceState="STATE4" DestinationState="STATE1" Equation="CE|WE" />
+    <Transition ElementId="TRANSITION13" SourceState="STATE6" DestinationState="STATE1" Equation="CE|WE" />
+    <Transition ElementId="TRANSITION14" SourceState="STATE7" DestinationState="STATE1" Equation="CE|WE" />
+    <Transition ElementId="TRANSITION15" SourceState="STATE8" DestinationState="STATE1" Equation="CE|WE" />
+  </StateMachine>
+</GPIFIIModel>

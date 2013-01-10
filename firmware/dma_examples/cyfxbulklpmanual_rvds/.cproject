@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?>
+
+<cproject>
+<storageModule moduleId="org.eclipse.cdt.core.settings">
+<cconfiguration id="cdt.managedbuild.config.arm40.exe.debug.30300855">
+<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.arm40.exe.debug.30300855" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+<externalSettings/>
+<extensions>
+<extension id="com.arm.eclipse.cdt.managedbuilder.ARMELF" point="org.eclipse.cdt.core.BinaryParser"/>
+<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+<extension id="com.arm.eclipse.cdt.managedbuilder.RealViewCoreToolsErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+</extensions>
+</storageModule>
+<storageModule moduleId="org.eclipse.cdt.core.pathentry"/>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<configuration artifactExtension="axf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;com.arm.eclipse.cdt.managedbuilder.RealViewCoreToolsErrorParser" id="cdt.managedbuild.config.arm40.exe.debug.30300855" name="Debug" parent="cdt.managedbuild.config.arm40.exe.debug" postannouncebuildStep="Converting AXF to image (.img) format" postbuildStep="&quot;${FX3_INSTALL_PATH}\util\elf2img\elf2img.exe&quot; -i ${ProjName}.axf -o ${ProjName}.img" preannouncebuildStep="" prebuildStep="">
+<folderInfo id="cdt.managedbuild.config.arm40.exe.debug.30300855." name="/" resourcePath="">
+<toolChain id="cdt.managedbuild.toolchain.arm40.exe.debug.103037476" name="ARM RealView Compilation Tools 4.0" superClass="cdt.managedbuild.toolchain.arm40.exe.debug">
+<targetPlatform id="cdt.managedbuild.target.arm40.exe.345704706" superClass="cdt.managedbuild.target.arm40.exe"/>
+<builder buildPath="${workspace_loc:/BulkLoopManualRvds/Debug}" id="cdt.managedbuild.target.arm.builder40.exe.1985914989" keepEnvironmentInBuildfile="false" name="CDT Internal Builder" superClass="cdt.managedbuild.target.arm.builder40.exe"/>
+<tool command="armcc -c -g " id="cdt.managedbuild.tool.arm.armcc40.exe.1182200367" name="ARM RealView Compiler 4.0" superClass="cdt.managedbuild.tool.arm.armcc40.exe">
+<option defaultValue="true" id="arm.rvct.armcc40.option.override.CONFIG_DEBUG.1995173229" name="Enable debug table generation (--debug)" superClass="arm.rvct.armcc40.option.override.CONFIG_DEBUG" valueType="boolean"/>
+<option defaultValue="arm.rvct.armcc.option.OPTLEVEL.0" id="arm.rvct.armcc40.option.override.OPTLEVEL.641366992" name="Optimization&#10;Level (-O)" superClass="arm.rvct.armcc40.option.override.OPTLEVEL" valueType="enumerated"/>
+<option id="arm.rvct.armcc40.option.CONFIG_CPU.2145265314" name="Architecture or Processor&#10; (--cpu=)" superClass="arm.rvct.armcc40.option.CONFIG_CPU" value="arm.rvct.armcc.option.CONFIG_CPU.ARM926EJ-S" valueType="enumerated"/>
+<option id="arm.rvct.armcc40.option.CONFIG_APCS.733792992" name="Procedure Call Standard Options (--apcs=)" superClass="arm.rvct.armcc40.option.CONFIG_APCS" valueType="stringList">
+<listOptionValue builtIn="false" value="interwork"/>
+</option>
+<option id="arm.rvct.armcc40.option.CONFIG_DEFINE.1662812536" name="List of #DEFINEs (-D)" superClass="arm.rvct.armcc40.option.CONFIG_DEFINE" valueType="definedSymbols">
+<listOptionValue builtIn="false" value="TX_ENABLE_EVENT_TRACE"/>
+<listOptionValue builtIn="false" value="DEBUG"/>
+<listOptionValue builtIn="false" value="CYU3P_FX3=1"/>
+<listOptionValue builtIn="false" value="__CYU3P_TX__=1"/>
+</option>
+<option id="arm.rvct.armcc40.option.INCLUDE_PATH.800590182" name="User Include Paths (-I)" superClass="arm.rvct.armcc40.option.INCLUDE_PATH" valueType="includePath">
+<listOptionValue builtIn="false" value="&quot;${FX3_INSTALL_PATH}\firmware\u3p_firmware\inc&quot;"/>
+<listOptionValue builtIn="false" value="&quot;../.&quot;"/>
+</option>
+<inputType id="cdt.managedbuild.tool.abstract.head.arm.armcc.input.1870483830" superClass="cdt.managedbuild.tool.abstract.head.arm.armcc.input"/>
+</tool>
+<tool command="armasm" id="cdt.managedbuild.tool.arm.armasm40.exe.1082785827" name="ARM RealView Assembler 4.0" superClass="cdt.managedbuild.tool.arm.armasm40.exe">
+<option defaultValue="true" id="arm.rvct.armasm40.option.override.DEBUG.1191200174" name="Source Line Debug (-g)" superClass="arm.rvct.armasm40.option.override.DEBUG" valueType="boolean"/>
+<option id="arm.rvct.armasm40.option.CONFIG_CPU.378227514" name="Architecture or Processor&#10; (--cpu=)" superClass="arm.rvct.armasm40.option.CONFIG_CPU" value="arm.rvct.armasm.option.CONFIG_CPU.ARM926EJ-S" valueType="enumerated"/>
+<option id="arm.rvct.armasm40.option.CONFIG_APCS.66027736" name="Procedure Call Standard Options (--apcs=)" superClass="arm.rvct.armasm40.option.CONFIG_APCS" valueType="stringList">
+<listOptionValue builtIn="false" value="interwork"/>
+</option>
+<inputType id="cdt.managedbuild.tool.abstract.head.arm.armasm.input.1275736955" superClass="cdt.managedbuild.tool.abstract.head.arm.armasm.input"/>
+</tool>
+<tool command="armlink " id="cdt.managedbuild.tool.arm.armlink40.1079427238" name="ARM RealView Linker 4.0" superClass="cdt.managedbuild.tool.arm.armlink40">
+<option id="arm.rvct.armlink40.option.CONFIG_CPU.136810660" name="Architecture or Processor&#10; (--cpu=)" superClass="arm.rvct.armlink40.option.CONFIG_CPU" value="arm.rvct.armlink.option.CONFIG_CPU.ARM926EJ-S" valueType="enumerated"/>
+<option id="arm.rvct.armlink40.option.SCATTER.641876591" name="Scatter description&#10;file (--scatter=)" superClass="arm.rvct.armlink40.option.SCATTER" value="&quot;${FX3_INSTALL_PATH}/firmware/common/cyfx3.scat&quot;" valueType="string"/>
+<option id="arm.rvct.armlink40.option.ENTRY.62874667" name="Image entry point&#10; (--entry=)" superClass="arm.rvct.armlink40.option.ENTRY" value="CyU3PFirmwareEntry" valueType="string"/>
+<option id="arm.rvct.armlink40.option.MAP.203040507" name="Image map (--map)" superClass="arm.rvct.armlink40.option.MAP" value="true" valueType="boolean"/>
+<option id="arm.rvct.armlink40.option.SYMBOLS.2023756565" name="Symbols (--symbols)" superClass="arm.rvct.armlink40.option.SYMBOLS" value="true" valueType="boolean"/>
+<option id="arm.rvct.armlink40.option.LIST.469021191" name="List file name&#10; (--list=)" superClass="arm.rvct.armlink40.option.LIST" value="cyfxbulklpmanual.map" valueType="string"/>
+<option id="arm.rvct.armlink40.option.IDE_EXTRA_LIBS.1699893815" name="Libraries" superClass="arm.rvct.armlink40.option.IDE_EXTRA_LIBS" valueType="libs">
+<listOptionValue builtIn="false" value="cyfxapi.a"/>
+<listOptionValue builtIn="false" value="cyu3threadx.a"/>
+</option>
+<option id="arm.rvct.armlink40.option.USERLIB_PATH.1470062556" name="Library Search Path (--userlibpath=)" superClass="arm.rvct.armlink40.option.USERLIB_PATH" valueType="stringList">
+<listOptionValue builtIn="false" value="&quot;${FX3_INSTALL_PATH}\firmware\u3p_firmware\lib\fx3_debug&quot;"/>
+</option>
+</tool>
+</toolChain>
+</folderInfo>
+</configuration>
+</storageModule>
+<storageModule moduleId="scannerConfiguration">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile"/>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</storageModule>
+<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+<storageModule moduleId="org.eclipse.cdt.core.language.mapping"/>
+</cconfiguration>
+
+<cconfiguration id="cdt.managedbuild.config.arm40.exe.debug.30300855.292106203">
+<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.arm40.exe.debug.30300855.292106203" moduleId="org.eclipse.cdt.core.settings" name="Release">
+<externalSettings/>
+<extensions>
+<extension id="com.arm.eclipse.cdt.managedbuilder.ARMELF" point="org.eclipse.cdt.core.BinaryParser"/>
+<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+<extension id="com.arm.eclipse.cdt.managedbuilder.RealViewCoreToolsErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+</extensions>
+</storageModule>
+<storageModule moduleId="org.eclipse.cdt.core.pathentry"/>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<configuration artifactExtension="axf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;com.arm.eclipse.cdt.managedbuilder.RealViewCoreToolsErrorParser" id="cdt.managedbuild.config.arm40.exe.debug.30300855.292106203" name="Release" parent="cdt.managedbuild.config.arm40.exe.debug" postannouncebuildStep="Converting AXF to image (.img) format" postbuildStep="&quot;${FX3_INSTALL_PATH}\util\elf2img\elf2img.exe&quot; -i ${ProjName}.axf -o ${ProjName}.img" preannouncebuildStep="" prebuildStep="">
+<folderInfo id="cdt.managedbuild.config.arm40.exe.debug.30300855.292106203." name="/" resourcePath="">
+<toolChain id="cdt.managedbuild.toolchain.arm40.exe.debug.164783946" name="ARM RealView Compilation Tools 4.0" superClass="cdt.managedbuild.toolchain.arm40.exe.debug">
+<targetPlatform id="cdt.managedbuild.target.arm40.exe.1761023160" superClass="cdt.managedbuild.target.arm40.exe"/>
+<builder autoBuildTarget="" buildPath="${workspace_loc:/BulkLoopManualRvds/Release}" cleanBuildTarget="" id="cdt.managedbuild.target.arm.builder40.exe.632133665" incrementalBuildTarget="" keepEnvironmentInBuildfile="false" name="CDT Internal Builder" superClass="cdt.managedbuild.target.arm.builder40.exe"/>
+<tool command="armcc -c --diag_style=ide --depend_format=unix_escaped --no_depend_system_headers" id="cdt.managedbuild.tool.arm.armcc40.exe.719419226" name="ARM RealView Compiler 4.0" superClass="cdt.managedbuild.tool.arm.armcc40.exe">
+<option defaultValue="true" id="arm.rvct.armcc40.option.override.CONFIG_DEBUG.899468346" name="Enable debug table generation (--debug)" superClass="arm.rvct.armcc40.option.override.CONFIG_DEBUG" value="false" valueType="boolean"/>
+<option defaultValue="arm.rvct.armcc.option.OPTLEVEL.0" id="arm.rvct.armcc40.option.override.OPTLEVEL.1556003600" name="Optimization&#10;Level (-O)" superClass="arm.rvct.armcc40.option.override.OPTLEVEL" value="arm.rvct.armcc.option.OPTLEVEL.2" valueType="enumerated"/>
+<option id="arm.rvct.armcc40.option.CONFIG_CPU.1248697158" name="Architecture or Processor&#10; (--cpu=)" superClass="arm.rvct.armcc40.option.CONFIG_CPU" value="arm.rvct.armcc.option.CONFIG_CPU.ARM926EJ-S" valueType="enumerated"/>
+<option id="arm.rvct.armcc40.option.CONFIG_APCS.1655171165" name="Procedure Call Standard Options (--apcs=)" superClass="arm.rvct.armcc40.option.CONFIG_APCS" valueType="stringList"/>
+<option id="arm.rvct.armcc40.option.CONFIG_DEFINE.156641639" name="List of #DEFINEs (-D)" superClass="arm.rvct.armcc40.option.CONFIG_DEFINE" valueType="definedSymbols">
+<listOptionValue builtIn="false" value="CYU3P_FX3=1"/>
+<listOptionValue builtIn="false" value="__CYU3P_TX__=1"/>
+</option>
+<option id="arm.rvct.armcc40.option.INCLUDE_PATH.508504848" name="User Include Paths (-I)" superClass="arm.rvct.armcc40.option.INCLUDE_PATH" valueType="includePath">
+<listOptionValue builtIn="false" value="&quot;${FX3_INSTALL_PATH}\firmware\u3p_firmware\inc&quot;"/>
+<listOptionValue builtIn="false" value="&quot;../.&quot;"/>
+</option>
+<inputType id="cdt.managedbuild.tool.abstract.head.arm.armcc.input.535714665" superClass="cdt.managedbuild.tool.abstract.head.arm.armcc.input"/>
+</tool>
+<tool command="armasm" id="cdt.managedbuild.tool.arm.armasm40.exe.666222116" name="ARM RealView Assembler 4.0" superClass="cdt.managedbuild.tool.arm.armasm40.exe">
+<option defaultValue="true" id="arm.rvct.armasm40.option.override.DEBUG.1262802463" name="Source Line Debug (-g)" superClass="arm.rvct.armasm40.option.override.DEBUG" valueType="boolean"/>
+<option id="arm.rvct.armasm40.option.CONFIG_CPU.1835736486" name="Architecture or Processor&#10; (--cpu=)" superClass="arm.rvct.armasm40.option.CONFIG_CPU" value="arm.rvct.armasm.option.CONFIG_CPU.ARM926EJ-S" valueType="enumerated"/>
+<option id="arm.rvct.armasm40.option.CONFIG_APCS.1988694711" name="Procedure Call Standard Options (--apcs=)" superClass="arm.rvct.armasm40.option.CONFIG_APCS" valueType="stringList">
+<listOptionValue builtIn="false" value="interwork"/>
+</option>
+<inputType id="cdt.managedbuild.tool.abstract.head.arm.armasm.input.185846431" superClass="cdt.managedbuild.tool.abstract.head.arm.armasm.input"/>
+</tool>
+<tool command="armlink " id="cdt.managedbuild.tool.arm.armlink40.1374273782" name="ARM RealView Linker 4.0" superClass="cdt.managedbuild.tool.arm.armlink40">
+<option id="arm.rvct.armlink40.option.CONFIG_CPU.1074944811" name="Architecture or Processor&#10; (--cpu=)" superClass="arm.rvct.armlink40.option.CONFIG_CPU" value="arm.rvct.armlink.option.CONFIG_CPU.ARM926EJ-S" valueType="enumerated"/>
+<option id="arm.rvct.armlink40.option.SCATTER.758397870" name="Scatter description&#10;file (--scatter=)" superClass="arm.rvct.armlink40.option.SCATTER" value="&quot;${FX3_INSTALL_PATH}/firmware/common/cyfx3.scat&quot;" valueType="string"/>
+<option id="arm.rvct.armlink40.option.ENTRY.2116541026" name="Image entry point&#10; (--entry=)" superClass="arm.rvct.armlink40.option.ENTRY" value="CyU3PFirmwareEntry" valueType="string"/>
+<option id="arm.rvct.armlink40.option.MAP.318896611" name="Image map (--map)" superClass="arm.rvct.armlink40.option.MAP" value="true" valueType="boolean"/>
+<option id="arm.rvct.armlink40.option.SYMBOLS.889030920" name="Symbols (--symbols)" superClass="arm.rvct.armlink40.option.SYMBOLS" value="true" valueType="boolean"/>
+<option id="arm.rvct.armlink40.option.LIST.87012979" name="List file name&#10; (--list=)" superClass="arm.rvct.armlink40.option.LIST" value="cyfxbulklpmanual.map" valueType="string"/>
+<option id="arm.rvct.armlink40.option.IDE_EXTRA_LIBS.768457602" name="Libraries" superClass="arm.rvct.armlink40.option.IDE_EXTRA_LIBS" valueType="libs">
+<listOptionValue builtIn="false" value="cyfxapi.a"/>
+<listOptionValue builtIn="false" value="cyu3threadx.a"/>
+</option>
+<option id="arm.rvct.armlink40.option.USERLIB_PATH.577321195" name="Library Search Path (--userlibpath=)" superClass="arm.rvct.armlink40.option.USERLIB_PATH" valueType="stringList">
+<listOptionValue builtIn="false" value="&quot;${FX3_INSTALL_PATH}\firmware\u3p_firmware\lib\fx3_release&quot;"/>
+</option>
+</tool>
+</toolChain>
+</folderInfo>
+</configuration>
+</storageModule>
+<storageModule moduleId="scannerConfiguration">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile"/>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</storageModule>
+<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+<storageModule moduleId="org.eclipse.cdt.core.language.mapping"/>
+</cconfiguration>
+</storageModule>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<project id="BulkLoopAuto.cdt.managedbuild.target.arm40.exe.898979837" name="Executable" projectType="cdt.managedbuild.target.arm40.exe"/>
+</storageModule>
+</cproject>

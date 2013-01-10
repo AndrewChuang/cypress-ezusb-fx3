@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link href="resources/styles.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <font face="Tahoma" size="2">
+        <p class="Title">
+            Interface Customization</p>
+			
+			<p class="BodyText">
+            Following parameters of the protocol can be modified to suite the target environment.
+            </p>	
+            <p class="BodyText">	
+            <u><b>FX3 peripherals used</b></u><br />			
+            <i>SPI</i>, <i>I2C</i>, <i>UART</i> and <i>I2S</i> can be selected.
+            <br />
+			
+            <br /><u><b>Data bus width:</b></u><br />            
+            Bus Width can be <i>8 Bit</i>, <i>16 Bit</i> or <i>32 Bit</i>. <i>32 Bit</i> Data bus width is not supported if <i>SPI</i> is selected.
+            <br/>
+			
+            <br/><u><b>Endianness:</b></u><br />
+            
+            Configure endianness of bus as <i>LittleEndian</i> or <i>BigEndian</i>.
+            <br/>
+			
+            <br/><u><b>FLAGA / FLAGB connection:</b></u><br />            
+            Flags indicate the status of the thread in terms of Full (when Master is writing data), Empty (when Master is reading data), Partial (Reached the Watermark set by firmware using the API CyU3PGpifSocketConfigure).			
+            <br/>
+            Select the appropriate option to set the Flag.
+            <br/>
+			
+            <br/><u><b>Pin mapping:</b></u><br />             
+            Mapping of the Interface controls (SLCS#,SLWE#, SLRD# & PKEND#) to the FX3&trade; pin connections can be modified.
+            <br/>
+            To modify the pin mapping click on the control pins on the EZ-USB&reg; FX3&trade; block. The drop down menu shows available pins that can be mapped.
+            </br></p>
+			<p class="BodyText">
+            <i>Note: To swap pins currently allocated pin must be freed. A pin can be freed by allocating to any other available pin temporarily.</i>
+			</p>
+    </font>
+</body>
+</html>

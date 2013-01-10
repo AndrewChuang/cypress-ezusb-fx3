@@ -1,0 +1,9 @@
+@echo off
+del main.c
+del test_uart.c
+del gpio_test.c
+del usb_boot.c
+del i2c_test.c
+del spi_test.c
+del usb_descriptors.c
+del cyfx3.scat

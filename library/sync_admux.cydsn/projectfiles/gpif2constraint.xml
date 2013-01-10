@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GPIFIIModelConstraint xmlns="http://www.cypress.com/GPIFIIDataSchema/" LibraryMajorNumber ="1" LibraryMinorNumber="1">
+  <InterfaceDefination xmlns="">
+    <InterfaceSetting>      
+      <DataBusWidth IsAvailable="true" IsDefaultOptions="false" UIParameterName="Data bus width" UIParameterType ="ComboBox">
+        <Options>
+          <Bit16></Bit16>
+          <Bit32></Bit32>
+        </Options>
+      </DataBusWidth>      
+    </InterfaceSetting>
+  </InterfaceDefination>
+  <StateMachine xmlns="">
+    <State ElementId="STATE1" DisplayName="IDLE">
+      <Action ActionType ="LD_DATA_COUNT" ElementId ="LD_DATA_COUNT0">
+        <CounterLimit IsAvailable="true" IsDefaultOptions ="false" UIParameterName="Burst word count" UIParameterType ="TextBox">
+          <Range>
+            <min>0</min>
+            <max>65535</max>
+          </Range>
+        </CounterLimit>
+      </Action>
+    </State>
+  </StateMachine>
+</GPIFIIModelConstraint>

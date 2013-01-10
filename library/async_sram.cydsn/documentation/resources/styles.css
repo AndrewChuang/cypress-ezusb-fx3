@@ -1,0 +1,116 @@
+BODY, TABLE, TR, TD, P, TH, LI, OL
+	{
+	FONT-SIZE: 9pt; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; FONT-STYLE: normal; 
+	}
+
+ 
+body {
+ margin-top: 10px;
+ background: white;
+ display: block;
+}
+
+.Title {
+	MARGIN-TOP: 0px; 
+	PADDING-LEFT: 6px;
+	FONT-WEIGHT: bold; FONT-SIZE: 10 pt; COLOR: #01325A;
+	background-image:url("blu-stripe.gif");
+	background-position:left;
+	background-repeat:repeat-y }
+
+.MYHEADER {
+	MARGIN-TOP: 0px; 
+	PADDING-LEFT: 6px;
+	FONT-WEIGHT: bold; FONT-SIZE: 10 pt; COLOR: #01325A;
+	background-image:url("blu-stripe.gif");
+	background-position:left;
+	background-repeat:repeat-y }
+
+.BodyText { COLOR: #000000; MARGIN-TOP: 8pt; MARGIN-BOTTOM: 8pt; FONT-SIZE: 8 pt; TEXT-ALIGN: justify }
+
+h3 {text-decoration:underline; FONT-SIZE: 8 pt}
+
+.ContentText { COLOR: #000000; MARGIN-TOP: 0pt; MARGIN-BOTTOM: 8pt }
+
+.Clear { clear: both; }
+
+.BoldText { COLOR: #000000; FONT-WEIGHT: bold; MARGIN-TOP: 8pt; MARGIN-BOTTOM: 8 pt; }
+
+.RightText {
+	COLOR: #000000; FONT-STYLE: normal; TEXT-ALIGN: right
+}
+.Header
+	{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 10 pt;
+	COLOR: #000000;
+	MARGIN-TOP: 12px;
+	MARGIN-BOTTOM: 6px;
+	border-top: solid 2px #B0C4DE;
+	}
+.BannerBG {
+	BACKGROUND-COLOR: #01325A
+}
+.CellHeadBG {
+	FONT-WEIGHT: bold; FONT-SIZE:  9pt; COLOR: #ffffff; BACKGROUND-COLOR: #ed1b24
+}
+
+.DesignFlow {
+	background: #fff url(blu-stripe.gif);
+	FONT-WEIGHT: bold;
+	width: 100px;
+	padding: 8px;
+
+}
+
+.white {
+	FONT-SIZE: 8pt;
+	COLOR: #ffffff;
+	TEXT-ALIGN: CENTER;
+}
+
+.white:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #ffffff
+}
+.white:visited {
+	FONT-SIZE: 8pt; COLOR: #ffffff
+}
+
+A:link {text-decoration: none; color: #000080;}
+A:visited {text-decoration: none; color: #000080;}
+A:hover {text-decoration: underline;}
+A:active {text-decoration: underline; color: Red;}
+
+
+.thumbnail{
+position: relative;
+z-index: 0;
+}
+
+.thumbnail:hover{
+background-color: transparent;
+z-index: 50;
+}
+
+.thumbnail span{ /*CSS for enlarged image*/
+position: absolute;
+background-color: lightyellow;
+padding: 0px;
+left: 500px;
+border: none;
+visibility: hidden;
+color: black;
+text-decoration: none;
+}
+
+.thumbnail span img{ /*CSS for enlarged image*/
+border-width: 0;
+padding: 2px;
+}
+
+.thumbnail:hover span{ /*CSS for enlarged image on hover*/
+visibility: visible;
+top: 20px;
+left: 8px; /*position where enlarged image should offset horizontally */
+
+}

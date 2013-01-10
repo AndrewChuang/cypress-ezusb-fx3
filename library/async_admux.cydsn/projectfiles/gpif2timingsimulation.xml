@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<GPIFIITimingSimulation version="1">
+  <Clock>200</Clock>
+  <Scenario Name="Read">
+    <State StateId="STARTSTATE1" WaitNumber="0" />
+    <State StateId="STATE1" WaitNumber="0" />
+    <State StateId="STATE8" WaitNumber="0" />
+    <State StateId="STATE2" WaitNumber="0" />
+    <State StateId="STATE4" WaitNumber="0" />
+    <State StateId="STATE5" WaitNumber="0" />
+    <State StateId="STATE1" WaitNumber="0" />
+  </Scenario>
+  <Scenario Name="Write">
+    <State StateId="STARTSTATE1" WaitNumber="0" />
+    <State StateId="STATE1" WaitNumber="0" />
+    <State StateId="STATE8" WaitNumber="0" />
+    <State StateId="STATE3" WaitNumber="0" />
+    <State StateId="STATE3" WaitNumber="0" />
+    <State StateId="STATE3" WaitNumber="0" />
+    <State StateId="STATE3" WaitNumber="0" />
+    <State StateId="STATE7" WaitNumber="0" />
+    <State StateId="STATE1" WaitNumber="0" />
+  </Scenario>
+  <Scenario Name="MultipleWrite">
+    <State StateId="STARTSTATE1" WaitNumber="0" />
+    <State StateId="STATE1" WaitNumber="0" />
+    <State StateId="STATE8" WaitNumber="0" />
+    <State StateId="STATE3" WaitNumber="0" />
+    <State StateId="STATE3" WaitNumber="0" />
+    <State StateId="STATE3" WaitNumber="0" />
+    <State StateId="STATE3" WaitNumber="0" />
+    <State StateId="STATE7" WaitNumber="0" />
+    <State StateId="STATE8" WaitNumber="0" />
+    <State StateId="STATE3" WaitNumber="0" />
+    <State StateId="STATE3" WaitNumber="0" />
+    <State StateId="STATE3" WaitNumber="0" />
+    <State StateId="STATE7" WaitNumber="0" />
+    <State StateId="STATE1" WaitNumber="0" />
+  </Scenario>
+  <Scenario Name="MultipleRead">
+    <State StateId="STARTSTATE1" WaitNumber="0" />
+    <State StateId="STATE1" WaitNumber="0" />
+    <State StateId="STATE8" WaitNumber="0" />
+    <State StateId="STATE2" WaitNumber="0" />
+    <State StateId="STATE4" WaitNumber="0" />
+    <State StateId="STATE5" WaitNumber="0" />
+    <State StateId="STATE8" WaitNumber="0" />
+    <State StateId="STATE2" WaitNumber="0" />
+    <State StateId="STATE4" WaitNumber="0" />
+    <State StateId="STATE5" WaitNumber="0" />
+    <State StateId="STATE8" WaitNumber="0" />
+    <State StateId="STATE2" WaitNumber="0" />
+    <State StateId="STATE4" WaitNumber="0" />
+    <State StateId="STATE5" WaitNumber="0" />
+    <State StateId="STATE1" WaitNumber="0" />
+  </Scenario>
+</GPIFIITimingSimulation>

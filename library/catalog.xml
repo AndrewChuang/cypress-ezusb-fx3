@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<catalog version="1">
+  <project name="async_admux" persistent="./async_admux.cydsn/async_admux.cyfx">
+    <version>1.0</version>
+	<type>GPIF2Lib</type>
+    <description>Asynchronous Address Data Multiplexed Interface</description>
+  </project>
+  <project name="sync_admux" persistent="./sync_admux.cydsn/sync_admux.cyfx">
+    <version>1.0</version>
+	<type>GPIF2Lib</type>
+    <description>Synchronous Address Data Multiplexed Interface</description>
+  </project>
+  <project name="async_slave_fifo_2bit" persistent="./async_slave_fifo_2bit.cydsn/async_slave_fifo_2bit.cyfx">
+    <version>1.0</version>
+    <type>GPIF2Lib</type>
+	<description>Asynchronous Slave FIFO 2 Bit Address Interface</description>
+  </project>
+  <project name="sync_slave_fifo_2bit" persistent="./sync_slave_fifo_2bit.cydsn/sync_slave_fifo_2bit.cyfx">
+    <version>1.0</version>
+	<type>GPIF2Lib</type>
+	<description>Synchronous Slave FIFO 2 Bit Address Interface</description>
+  </project>  
+  <project name="async_slave_fifo_5bit" persistent="./async_slave_fifo_5bit.cydsn/async_slave_fifo_5bit.cyfx">
+    <version>1.0</version>
+    <type>GPIF2Lib</type>
+	<description>Asynchronous Slave FIFO 5 Bit Address Interface</description>
+  </project>
+  <project name="sync_slave_fifo_5bit" persistent="./sync_slave_fifo_5bit.cydsn/sync_slave_fifo_5bit.cyfx">
+    <version>1.0</version>
+	<type>GPIF2Lib</type>
+	<description>Synchronous Slave FIFO 5 Bit Address Interface</description>
+  </project>
+  <project name="async_sram" persistent="./async_sram.cydsn/async_sram.cyfx">
+    <version>1.0</version>
+    <type>GPIF2Lib</type>
+    <description>Asynchronous SRAM Interface</description>
+  </project>
+</catalog>
