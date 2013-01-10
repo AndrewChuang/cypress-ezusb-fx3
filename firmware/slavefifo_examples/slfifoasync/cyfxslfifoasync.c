@@ -28,28 +28,82 @@
    the host. Appropriate vendor class USB enumeration descriptors with these two bulk
    endpoints are implemented.
 
+   ||  
+   ||  이 예제는 2 USB bulk EP를 포함합니다. bulk OUT EP는 HOST로부터 데이터를 받는 역할(producer)을 합니다.
+   ||  bulk IN EP는 HOST에게 데이터를 주는 역할(consumer)을 합니다. 
+   ||  두 bulk EP를 가지는 적합한 vendor class USB 열거 디스크립터들은 구현됩니다.(무슨말?)
+   ||  
+   ||  Cypress입장: OUT EP = Producer = Get함수 사용해서 데이터를 읽는다.
+   ||  Cypress입장: IN EP  = Consumer = Send함수 사용해서 데이터를 보낸다.
+   ||  
+   
    The GPIF configuration data for the Asynchronous Slave FIFO operation is loaded onto
    the appropriate GPIF registers. The p-port data transfers are done via the producer
    p-port socket and the consumer p-port socket.
 
+   ||  
+   ||  비동기 Slave FIFO를 위한  GPIF 설정 데이터는 적당한 GPIF register상에 로드됩니다.
+   ||  p-port data 전송은 '생산자 p-port 소켓'과 '소비자 p-port 소켓'을 통해 이루어집니다.
+   ||  
+
    This example implements two DMA Channels in MANUAL mode one for P to U data transfer
    and one for U to P data transfer.
+
+   ||
+   ||  이 예제는 MANUAL 모드로 P to U 데이터 전송 그리고 U to P 데이터 전송을 하는 두 DMA 채널을 구현합니다. 
+   ||  
 
    The U to P DMA channel connects the USB producer (OUT) endpoint to the consumer p-port
    socket. And the P to U DMA channel connects the producer p-port socket to the USB 
    consumer (IN) endpoint.
 
+   ||  
+   ||  U to P DMA 채널은 USB producer(OUT) 엔드포인트를 consumer p-port socket으로 연결합니다.
+   ||  그리고 P to U DMA 채널은 producer p-port socket을 USB consumer (IN) 엔드포인트로 연결합니다.
+   ||  
+   ||  
+   ||  o------o OUT EP        (Producer) o-----o          Consumer p-port socket o------o
+   ||  | Host | >>>>>>>>>>>>>>>>>>>>>>>> | FX3 | >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> | GPIF |
+   ||  o------o                          o-----o                                 o------o
+   ||  
+   ||  
+   ||  o------o IN EP         (Consumer) o-----o          Producer p-port socket o------o
+   ||  | Host | <<<<<<<<<<<<<<<<<<<<<<<< | FX3 | <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< | GPIF |
+   ||  o------o                          o-----o                                 o------o
+   ||  
+   
    Upon every reception of data in the DMA buffer from the host or from the p-port, the
    CPU is signalled using DMA callbacks. There are two DMA callback functions implemented
    each for U to P and P to U data paths. The CPU then commits the DMA buffer received so
    that the data is transferred to the consumer.
 
+   ||  
+   ||  host나 p-port로부터 DMA 버퍼에 데이터 수신을 하자마자, CPU는 DMA 콜백을 사용해서 신호를 받습니다.
+   ||  U to P와 P to U 데이터 경로 각각을 위해 구현된 두가지 DMA 콜백 함수가 있습니다. 
+   ||  그 뒤에 CPU는 consumer에게 데이터를 전송하기위해서 DMA 버퍼 수신을 시작합니다. 
+   ||  
+
    The DMA buffer size for each channel is defined based on the USB speed. 64 for full
    speed, 512 for high speed and 1024 for super speed. CY_FX_SLFIFO_DMA_BUF_COUNT in the
    header file defines the number of DMA buffers per channel.
 
+   ||  
+   ||  각 체널을 위한 DMA 버퍼 사이즈는 USB speed를 기반으로 정의됩니다. 
+   ||  
+   ||  full speed는 64 byte.
+   ||  high speed는 512 byte.
+   ||  super speed는 1024 byte.
+   ||  
+   ||  CY_FX_SLFIFO_DMA_BUF_COUNT 상수는 채널당 DMA 버퍼의 수를 정의합니다.
+   ||  
+
    The constant CY_FX_SLFIFO_GPIF_16_32BIT_CONF_SELECT in the header file is used to
    select 16bit or 32bit GPIF data bus configuration.
+   
+   ||  
+   ||  CY_FX_SLFIFO_GPIF_16_32BIT_CONF_SELECT 상수는 16bit 또는 32bit GPIF 데이터 버스 설정을 선택하기위해서 사용됩니다.
+   ||  
+
  */
 
 #include "cyu3system.h"
