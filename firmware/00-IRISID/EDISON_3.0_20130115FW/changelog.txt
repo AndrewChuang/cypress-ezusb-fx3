@@ -1,0 +1,16 @@
+Change Log
+----------
+
+  * 2013-01-14	  
+	- 목적     : Endpoint를 추가하는 방법을 알아보고자 한다.
+	- 기반코드 : SlaveFifoSync
+	- 작업내용 :
+		- EP2-IN (Bulk) 추가
+		- EP2-OUT (Bulk) 추가
+
+  * 2013-01-15
+	- 목적     : EP1-IN, EP1-OUT, EP2-IN, EP2-OUT 중에서 EP1-IN과 EP2-IN만 사용하고자 한다.
+	- 기반코드 : SlaveFifoSync
+	- 작업내용 :
+		- EP1-IN (Bulk) EP0-OUT에 대한 리턴용
+		- EP2-IN (Bulk) Slave FIFO용
