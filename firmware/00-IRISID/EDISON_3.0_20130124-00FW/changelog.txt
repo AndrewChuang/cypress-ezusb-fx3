@@ -1,0 +1,43 @@
+Change Log
+----------
+
+  * 2013-01-14	  
+	- 목적     : Endpoint를 추가하는 방법을 알아보고자 한다.
+	- 기반코드 : SlaveFifoSync sample
+	- 작업내용 :
+		- EP2-IN (Bulk) 추가
+		- EP2-OUT (Bulk) 추가
+
+  * 2013-01-15
+	- 목적     : 불필요한 Endpoint 제거
+	- 기반코드 : 2013-01-14
+	- 작업내용 : 
+		- 불필요한 OUT Endpoint는 제거하였음.
+			- EP1-IN, EP2-IN 을 Enable
+			- EP1-OUT, EP2-OUT 을 Disable
+			- 그래서 남아있는 Endpoint는 EP0, EP1-IN, EP2-IN
+		- EP1-IN (Bulk)의 용도는 EP0-OUT에 대한 리턴용
+		- EP2-IN (Bulk)의 용도는 Slave FIFO의 입력용도임. 다시말해 Cypress가 FPGA로부터 데이터를 받는용도.
+		- 아직 Slave FIFO는 미구현상태임.
+
+  * 2013-01-16
+	- 목적     : I2C 통신 추가
+	- 기반코드 : 2013-01-15
+	- 작업내용 :
+		- I2C 기능을 추가하여 EEPROM에 Read/Write 할 수 있도록 테스트함.
+		- 향후 FPGA와 통신도 I2C로 할 예정임.
+
+
+  * 2013-01-23
+	- 목적     : SlaveFIFO 기능이 동작 가능하도록 수정함.
+	- 기반코드 : 2013-01-16
+	- 작업내용 :
+		- GPIF II Interface를 통해서 데이터를 주고받을 수 있도록 작업함.
+		- 다시말해 Slave FIFO 기능이 되는지 테스트했음.
+		- GPIF II 프로젝트도 여기에 포함하는 것이 좋을 듯...
+
+
+  * 2013-01-24
+	- 목적     : Slave FIFO를 위한 Endpoint 추가
+	- 기반코드 : 2013-01-23
+	- 작업내용 :
